@@ -14,16 +14,50 @@ import {DrawerNavigator} from 'react-navigation';
               </Button>
           </Left>
           <Body>
-            <Text style={{fontWeight: 'bold', fontSize: 18, color:'#fff'}}>  Home </Text>
+            <Text style={{fontWeight: 'bold', fontSize: 18, color:'#fff'}}>  Hamro Pasal </Text>
           </Body>
           <Right />
         </Header>
+        <Content style={{paddingHorizontal:10, backgroundColor: '#ddd'}}>
+            <Button 
+            style={{backgroundColor: 'green',marginTop:36 }} 
+            block 
+            rounded
+            onPress={()=> this.props.navigation.navigate('sell')}
+            >
+                <Icon name='cart' style={{color:'#fff'}}/>
+                <Text style={{fontWeight: 'bold', fontSize: 18, color:'#fff'}}> Sell Item </Text>
+            </Button>
+
+            <Button style={{backgroundColor: '#B388FF', marginTop:36}} block rounded>
+                <Icon name='flame' style={{color:'#fff'}}/>
+                <Text style={{fontWeight: 'bold', fontSize: 18, color:'#fff'}}> Latest Item </Text>
+            </Button>
+
+            <Button style={{backgroundColor: '#6A1B9A',marginTop:36 }} block rounded>
+                <Icon name='return-left' style={{color:'#fff'}}/>
+                <Text style={{fontWeight: 'bold', fontSize: 18, color:'#fff'}}> Return Item </Text>
+            </Button>
+
+            <Button style={{backgroundColor: '#FF80AB', marginTop:36}} block rounded>
+                <Icon name='briefcase' style={{color:'#fff'}}/>
+                <Text style={{fontWeight: 'bold', fontSize: 18, color:'#fff'}}> Big Sell</Text>
+            </Button>
+
+            <Button style={{backgroundColor: '#FF8A80',marginTop:36 }} block rounded>
+                <Icon name='pricetags' style={{color:'#fff'}}/>
+                <Text style={{fontWeight: 'bold', fontSize: 18, color:'#fff'}}> Sale Sale  </Text>
+            </Button>
+        </Content>
       </Container>
     );
   }
 }
 
 export default Home = DrawerNavigator({
-    home: {screen: MainHome},
+    home:
+     {
+         screen: MainHome,        
+    },
 
 })

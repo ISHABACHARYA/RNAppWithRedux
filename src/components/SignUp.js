@@ -23,20 +23,9 @@ class SignUp extends React.Component {
 
   _update = (value, type) => {
     if (type === "email") {
-      Toast.show({
-        text: "email Edited",
-        position: "bottom",
-        buttonText: "ok !",
-        type: "success"
-      });
       this.props.email_changed(value);
     } else if (type === "password") {
-      Toast.show({
-        text: "password Edited",
-        position: "top",
-        buttonText: "ok !",
-        type: "warning"
-      });
+     
       this.props.password_changed(value);
     }
   };
@@ -55,9 +44,9 @@ class SignUp extends React.Component {
   render() {
     return (
       <Container>
-        <Header>
+        <Header style={{backgroundColor: '#2979FF'}}>
           <Body>
-            <Text style={{fontWeight:'bold', fontSize: 18}}> SignUp</Text>
+            <Text style={{fontWeight:'bold', fontSize: 18, color: '#fff'}}> SignUp</Text>
           </Body>
           </Header>
         <Content>
